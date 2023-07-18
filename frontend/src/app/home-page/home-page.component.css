@@ -1,0 +1,190 @@
+/* Style for the header section */
+*{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1rem; */
+    background-color: #333545; /* Update with your desired background color */
+    color: #fff; /* Update with your desired text color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  /* Style for the logo */
+  .logo img {
+    width: 40px; /* Adjust the size of the logo image */
+    height: 40px;
+    margin-right: 10px; /* Add spacing between the logo and text */
+  }
+  
+  /* Style for the website name */
+  .logo span {
+    font-size: 20px;
+    font-weight: bold;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#f1f3f4, #C4242B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Avenir next", sans-serif;
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: normal;
+    font-weight: 650;
+  
+  }
+  
+  /* Style for the search navbar */
+  .search-nav{
+    /* border: 3px solid black; */
+    background-color: #333545;
+  }
+  .main_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  background-color: #333545; /* Add your desired background color */
+  color: white; /* Add your desired font color */
+  padding: 20px 30px;
+  width: 90%;
+  /* border: 2px solid red; */
+  margin: auto;
+  }
+  
+  /* Style for the search input box */
+  .search-box input {
+    padding: 0.5rem 1rem;
+    border-radius: 10px; /* Create a rounded search box */
+    border: none;
+    background-color: #f2f0f0; /* Update with your desired search box background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    font-size: 16px;
+    width: 400px; /* Adjust the width of the search box */
+    transition: width 0.3s ease-in-out; /* Add a smooth transition on focus */
+  }
+  
+  /* Style for the search input box on focus */
+  .search-box input:focus {
+    width: 430px; /* Increase the width on focus */
+  }
+  
+  /* Style for the login and signup buttons */
+  .auth-buttons button {
+    margin-left: 10px; /* Add spacing between the buttons */
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px; /* Create rounded buttons */
+    font-size: 16px;
+    cursor: pointer;
+    /* Add background color and text color for the buttons */
+    background-color: #F84464; /* White color - Update with your desired color */
+    color: white; /* Blue text - Update with your desired text color */
+    transition: background-color 0.3s ease-in-out; /* Add a smooth transition on hover */
+  }
+  
+  /* Style for the login and signup buttons on hover */
+  .auth-buttons button:hover {
+    background-color: #620514; /* Light gray color on hover - Update with your desired hover background color */
+    
+  }
+  
+  /* Style for the hamburger icon */
+  .hamburger-icon {
+    cursor: pointer;
+    /* You can customize the icon color and size here */
+    color: #fff;
+    font-size: 24px;
+    margin-left: -20px;
+ }
+  
+  /* Style for the hamburger menu content */
+  .hamburger-content {
+    position: absolute;
+    top: 60px; /* Adjust the top position of the menu */
+     right: 20px; /*Adjust the right position of the menu */
+    background-color: #fff; /* Update with your desired menu background color */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    display: none;
+  }
+  
+  /* Show the hamburger menu content when it's open */
+  .hamburger-content.show {
+    display: block;
+  }
+  
+  /* Style for the navigation links in the hamburger menu */
+  .hamburger-content a {
+    display: block;
+    padding: 10px;
+    color: #333; /* Update with your desired link text color */
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out; /* Add a smooth transition on hover */
+  }
+  
+  /* Add hover effect for the navigation links in the hamburger menu */
+  .hamburger-content a:hover {
+    background-color: #f1f1f1; /* Light gray color on hover - Update with your desired hover background color */
+  }
+  
+
+  /* CSS for the carousel */
+
+.slider {
+    overflow: hidden;
+    width: 100%;
+
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition between slides */
+  }
+  
+  .slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Hide all slides except the active slide */
+  .slide:not(.active) {
+    display: none;
+  }
+  
+  /* CSS for the carousel dots */
+  .dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -23px;
+    z-index: 5;
+    
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition on dot color change */
+  
+    background-color: white;
+  }
+  
+  .dot.active {
+    background-color: #007bff; /* Customize the active dot color */
+  }
