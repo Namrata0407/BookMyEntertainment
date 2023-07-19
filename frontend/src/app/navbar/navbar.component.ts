@@ -1,14 +1,20 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component ,HostListener, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class HomePageComponent implements OnInit {
+export class NavbarComponent implements OnInit{
   isHamburgerMenuOpen = false;
+
+  showEntityNavbar = true;
   slides: HTMLElement[] = []; // Initialize the slides property with an empty array
   currentIndex: number = 0;
+
+  toggleHamburgerMenu() {
+    this.isHamburgerMenuOpen = !this.isHamburgerMenuOpen;
+  }
 
   // Close the hamburger menu when clicking outside of it
   @HostListener('document:click', ['$event'])
@@ -33,4 +39,5 @@ export class HomePageComponent implements OnInit {
     this.currentIndex = this.slides.indexOf(slide);
     this.slides[this.currentIndex].classList.add('active');
   }
+  
 }

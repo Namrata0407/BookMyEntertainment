@@ -1,0 +1,155 @@
+
+  /* Style for the logo */
+  .logo{
+    display: flex;
+  }
+  .logo img {
+    height: 30px;
+  margin-right: 10px;
+    margin-right: 10px; /* Add spacing between the logo and text */
+  }
+  
+  /* Style for the website name */
+  .logo span {
+    font-weight: bold;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#f1f3f4, #C4242B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Avenir next", sans-serif;
+    font-size: 28px;
+    line-height: 26px;
+    letter-spacing: normal;
+    font-weight: 650;
+  
+  }
+  
+  /* Style for the search navbar */
+  .search-nav{
+    /* border: 3px solid black; */
+    background-color: #333545;
+  }
+  .main_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  background-color: #333545; /* Add your desired background color */
+  color: white; /* Add your desired font color */
+  padding: 20px 30px;
+  width: 90%;
+  /* border: 2px solid red; */
+  margin: auto;
+  }
+  
+  /* Style for the search input box */
+  .search-box input {
+    padding: 0.5rem 1rem;
+    border-radius: 10px; /* Create a rounded search box */
+    border: none;
+    background-color: #f2f0f0; /* Update with your desired search box background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    font-size: 16px;
+    width: 400px; /* Adjust the width of the search box */
+    transition: width 0.3s ease-in-out; /* Add a smooth transition on focus */
+  }
+  
+  /* Style for the search input box on focus */
+  .search-box input:focus {
+    width: 430px; /* Increase the width on focus */
+  }
+  
+  /* Style for the login and signup buttons */
+  .auth-buttons button {
+    margin-left: 10px; /* Add spacing between the buttons */
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px; /* Create rounded buttons */
+    font-size: 16px;
+    cursor: pointer;
+    /* Add background color and text color for the buttons */
+    background-color: #F84464; /* White color - Update with your desired color */
+    color: white; /* Blue text - Update with your desired text color */
+    transition: background-color 0.3s ease-in-out; /* Add a smooth transition on hover */
+  }
+  
+  /* Style for the login and signup buttons on hover */
+  .auth-buttons button:hover {
+    background-color: #620514; /* Light gray color on hover - Update with your desired hover background color */
+    
+  }
+  
+  /* Style for the hamburger icon */
+  .hamburger-icon {
+    cursor: pointer;
+    /* You can customize the icon color and size here */
+    color: #fff;
+    font-size: 24px;
+    margin-left: -20px;
+ }
+  
+  /* Style for the hamburger menu content */
+  .hamburger-content {
+    position: absolute;
+    top: 60px; /* Adjust the top position of the menu */
+     right: 20px; /*Adjust the right position of the menu */
+    background-color: #fff; /* Update with your desired menu background color */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    display: none;
+  }
+  
+  /* Show the hamburger menu content when it's open */
+  .hamburger-content.show {
+    display: block;
+  }
+  
+  /* Style for the navigation links in the hamburger menu */
+  .hamburger-content a {
+    display: block;
+    padding: 10px;
+    color: #333; /* Update with your desired link text color */
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out; /* Add a smooth transition on hover */
+  }
+  
+  /* Add hover effect for the navigation links in the hamburger menu */
+  .hamburger-content a:hover {
+    background-color: #f1f1f1; /* Light gray color on hover - Update with your desired hover background color */
+  }
+  
+
+  /* Entity-specific Navbar */
+.entity-nav {
+    background-color: #222539;
+    /* padding: 3px ; */
+    display: flex;
+    /* justify-content: center; */
+  }
+  
+  /* Navigation Items */
+  .nav-items {
+    display: flex;
+    gap: 20px;
+    margin-left: 65px;
+
+  }
+  
+  /* Style for the navigation links */
+  .nav-items a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  
+  /* Add a border to the active link */
+  .nav-items a.router-link-active {
+    border: 1px solid #e50914;
+  }
+  
+  /* Hover effect for the navigation links */
+  .nav-items a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
