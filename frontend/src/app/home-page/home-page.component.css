@@ -13,123 +13,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
   }
   
-  /* Style for the logo */
-  .logo img {
-    width: 40px; /* Adjust the size of the logo image */
-    height: 40px;
-    margin-right: 10px; /* Add spacing between the logo and text */
-  }
-  
-  /* Style for the website name */
-  .logo span {
-    font-size: 20px;
-    font-weight: bold;
-    font-size: 72px;
-    background: -webkit-linear-gradient(#f1f3f4, #C4242B);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Avenir next", sans-serif;
-    font-size: 26px;
-    line-height: 26px;
-    letter-spacing: normal;
-    font-weight: 650;
-  
-  }
-  
-  /* Style for the search navbar */
-  .search-nav{
-    /* border: 3px solid black; */
-    background-color: #333545;
-  }
-  .main_div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  background-color: #333545; /* Add your desired background color */
-  color: white; /* Add your desired font color */
-  padding: 20px 30px;
-  width: 90%;
-  /* border: 2px solid red; */
-  margin: auto;
-  }
-  
-  /* Style for the search input box */
-  .search-box input {
-    padding: 0.5rem 1rem;
-    border-radius: 10px; /* Create a rounded search box */
-    border: none;
-    background-color: #f2f0f0; /* Update with your desired search box background color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-    font-size: 16px;
-    width: 400px; /* Adjust the width of the search box */
-    transition: width 0.3s ease-in-out; /* Add a smooth transition on focus */
-  }
-  
-  /* Style for the search input box on focus */
-  .search-box input:focus {
-    width: 430px; /* Increase the width on focus */
-  }
-  
-  /* Style for the login and signup buttons */
-  .auth-buttons button {
-    margin-left: 10px; /* Add spacing between the buttons */
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 10px; /* Create rounded buttons */
-    font-size: 16px;
-    cursor: pointer;
-    /* Add background color and text color for the buttons */
-    background-color: #F84464; /* White color - Update with your desired color */
-    color: white; /* Blue text - Update with your desired text color */
-    transition: background-color 0.3s ease-in-out; /* Add a smooth transition on hover */
-  }
-  
-  /* Style for the login and signup buttons on hover */
-  .auth-buttons button:hover {
-    background-color: #620514; /* Light gray color on hover - Update with your desired hover background color */
-    
-  }
-  
-  /* Style for the hamburger icon */
-  .hamburger-icon {
-    cursor: pointer;
-    /* You can customize the icon color and size here */
-    color: #fff;
-    font-size: 24px;
-    margin-left: -20px;
- }
-  
-  /* Style for the hamburger menu content */
-  .hamburger-content {
-    position: absolute;
-    top: 60px; /* Adjust the top position of the menu */
-     right: 20px; /*Adjust the right position of the menu */
-    background-color: #fff; /* Update with your desired menu background color */
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
-    display: none;
-  }
-  
-  /* Show the hamburger menu content when it's open */
-  .hamburger-content.show {
-    display: block;
-  }
-  
-  /* Style for the navigation links in the hamburger menu */
-  .hamburger-content a {
-    display: block;
-    padding: 10px;
-    color: #333; /* Update with your desired link text color */
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out; /* Add a smooth transition on hover */
-  }
-  
-  /* Add hover effect for the navigation links in the hamburger menu */
-  .hamburger-content a:hover {
-    background-color: #f1f1f1; /* Light gray color on hover - Update with your desired hover background color */
-  }
-  
 
   /* CSS for the carousel */
 
@@ -188,3 +71,117 @@
   .dot.active {
     background-color: #007bff; /* Customize the active dot color */
   }
+
+/* CSS for the custom slider */
+.custom-slider {
+  overflow: hidden; /* Hide overflow to create the sliding effect */
+  margin: 0 auto; /* Center the custom slider */
+  /* border: 2px solid red; */
+  width: 83%;
+  margin-top: 30px;
+}
+
+.custom-slide-container {
+  display: flex; /* Display slides horizontally */
+  transition: transform 0.5s ease-in-out; /* Add smooth transition effect */
+}
+
+.custom-slide {
+  display: flex; /* Display boxes horizontally */
+  gap: 20px; /* Add 15px space between boxes */
+  width: calc(100% + (4 * 15px)); /* Adjust total width to include gaps */
+}
+
+.custom-box {
+  flex: 0 0 calc(20% - 15px); /* Set the desired width for each box with spacing */
+  height: auto;/* Set the desired fixed height for each box */
+  /* border: 3px solid black; */
+  margin-top: 10px;
+  border-radius: 13px;
+}
+
+.custom-box>img{
+width: 100%;
+height: 100%;
+}
+
+/* Styling for the left and right buttons */
+.slider-buttons {
+  display: flex; /* Display buttons in a row */
+  justify-content: space-between; /* Separate buttons to left and right */
+  align-items: center; /* Center buttons vertically */
+}
+
+.slider-buttons-2 {
+  display: flex; /* Display buttons in a row */
+  justify-content: space-between; /* Separate buttons to left and right */
+  align-items: center; /* Center buttons vertically */
+}
+
+.left-button,
+.right-button {
+  padding: 10px 20px; /* Add padding to buttons for better appearance */
+  border: none; /* Remove default button borders */
+  background-color: #007bff; /* Customize button background color */
+  color: #fff; /* Customize button text color */
+  cursor: pointer;
+  margin-top: -210px;
+}
+
+.left-button:hover,
+.right-button:hover {
+  background-color: #0056b3; /* Customize button background color on hover */
+}
+
+.left-button-2,
+.right-button-2 {
+  padding: 10px 20px; /* Add padding to buttons for better appearance */
+  border: none; /* Remove default button borders */
+  background-color: #007bff; /* Customize button background color */
+  color: #fff; /* Customize button text color */
+  cursor: pointer;
+  margin-top: -310px;
+}
+
+.left-button-2:hover,
+.right-button-2:hover {
+  background-color: #0056b3; /* Customize button background color on hover */
+}
+
+.custom-slider>span{
+  font-weight: bold;
+  font-size: 27px;
+}
+
+
+.custom-div {
+  width: 83.5%;
+  height: 100px;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 30px;
+  background-color:  #353945;
+  border-radius: 10px;
+
+}
+
+.custom-div h1 {
+  font-size: 24px;
+  color: #FAD464;
+  /* padding: 10px 20px; */
+  word-spacing: 10px;
+  text-align: center;
+}
+
+/* footer */
+
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+

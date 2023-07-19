@@ -1,0 +1,96 @@
+
+/* Set the overall style for the footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+
+
+/* Style for the footer logo and links */
+.footer{
+    margin-top: 30px;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo{
+    display: flex;
+  }
+  .footer-logo img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .footer-logo>span{
+    font-size: 29px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#f1f3f4, #C4242B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Avenir next", sans-serif;
+   
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  /* Style for the footer sections */
+  .footer-sections {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section {
+    flex: 1 1 25%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h5 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #b0b0b1;
+  }
+  
+  .footer-section p {
+    color: grey;
+    font-size: 12px;
+    /* border: 3px solid red; */
+  }
+  .footer-section> p :hover {
+    color: white;
+    cursor: pointer;
+  
+  }
+  /* Style for the footer bottom text */
+  .footer-bottom {
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    font-size: 14px;
+  }
+  
+  /* Hover effect for links */
+  .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  
