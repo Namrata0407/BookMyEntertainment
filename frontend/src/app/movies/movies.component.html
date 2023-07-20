@@ -1,0 +1,112 @@
+<div class="movies-container">
+   <div class="filter_main">
+    <span>Filters</span>
+    <div class="filter-section">
+        <button class="filter-toggle" (click)="toggleFilter('language')">Language</button>
+        <div class="filter-content" [ngClass]="{'collapsed': isLanguageCollapsed}">
+          <div class="filter-options">
+            <!-- Language options here -->
+            <button>Hindi</button>
+            <button>English</button>
+            <button>Telgu</button>
+            <button>Tamil</button>
+            <button>Marathi</button>
+            <button>Malyalam</button>
+            <button>Kannda</button>
+            <button>Punjabi</button>
+            <button>Gujrati</button>
+            <button>Multi Language</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="filter-section">
+        <button class="filter-toggle" (click)="toggleFilter('genres')">Genres</button>
+        <div class="filter-content" [ngClass]="{'collapsed': isGenresCollapsed}">
+          <div class="filter-options">
+            <!-- Genre options here -->
+            <button>Drama</button>
+          
+          
+            <button>Action</button>
+            <button>Thriller</button>
+            <button>Comedy</button>
+            <button>Romantic</button>
+            <button>Crime</button>
+            <button>Horror</button>
+            <button>Biography</button>   
+            <button>Adventure</button>    
+            <button>Animation</button> 
+          </div>
+        </div>
+      </div>
+    
+      <div class="filter-section">
+        <button class="filter-toggle" (click)="toggleFilter('rating')">Rating</button>
+        <div class="filter-content" [ngClass]="{'collapsed': isRatingCollapsed}">
+          <div class="filter-options star_class">
+            <!-- Rating options here -->
+            <!-- <i class="fal fa-star"></i> -->
+<div>
+    <i class="fa-duotone fa-star"></i>
+    <i class="fa-duotone fa-star"></i>
+    <i class="fa-duotone fa-star"></i>
+    <i class="fa-duotone fa-star"></i>
+    <i class="fa-duotone fa-star"></i>
+</div>
+<div>
+    <i class="fa-duotone fa-star"></i>
+    <i class="fa-duotone fa-star"></i>
+    <i class="fa-duotone fa-star"></i>
+    <i class="fa-duotone fa-star"></i>
+</div>
+<div>
+    <i class="fa-duotone fa-star"></i>
+    <i class="fa-duotone fa-star"></i>
+    <i class="fa-duotone fa-star"></i>
+    
+</div>
+<div>
+    <i class="fa-duotone fa-star"></i>
+    <i class="fa-duotone fa-star"></i>
+</div>
+<div>
+    ⭐
+</div>   
+
+
+        </div>
+      
+              
+        </div>
+      </div>
+    
+      <div class="filter-section">
+        <button class="filter-toggle" (click)="toggleFilter('releaseDate')">Release Date</button>
+        <div class="filter-content" [ngClass]="{'collapsed': isReleaseDateCollapsed}">
+          <div class="filter-options">
+            <!-- Release date options here -->
+            <button>ASC</button>
+            <button>DESC</button>
+          </div>
+        </div>
+      </div>
+   </div>
+    
+
+    <div class="movies-grid">
+      <div class="movie-card" *ngFor="let movie of movies">
+        <img [src]="movie.poster" [alt]="movie.title" class="movie-poster">
+        <div class="movie-info">
+          <h3>Title:{{ movie.title }}</h3>
+          <p><strong>Description:</strong>{{ movie.description }}</p>
+          <p><strong>Genre:</strong> {{ movie.genre }}</p>
+          <p><strong>Duration:</strong> {{ movie.duration }}</p>
+          <p><strong>Language:</strong> {{ movie.language }}</p>
+          <p><strong>Release Date:</strong> {{ movie.releaseDate }}</p>
+          <button class="book-now-button">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
