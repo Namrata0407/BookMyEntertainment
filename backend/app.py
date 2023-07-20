@@ -23,7 +23,7 @@ userCollection = db['users']
 
 # Route for retrieving data
 @app.route('/movies', methods=['GET'])
-@jwt_required()
+# @jwt_required()
 def get_data():
     data = list(collection.find())
 
@@ -45,7 +45,7 @@ def get_data():
 
 # Route for adding data
 @app.route('/movies', methods=['POST'])
-@jwt_required()
+# @jwt_required()
 def add_data():
     data = request.get_json()
     document = data

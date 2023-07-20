@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
-
-import { Routes,RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
+import { MoviesComponent } from './movies/movies.component'; // Import the MoviesComponent
 
 const routes: Routes = [
-    { path: '', component: HomePageComponent },
-   
-  ];
+  { path: '', component: HomePageComponent }, // Default route to the HomePageComponent
+  { path: 'help', component: ChatbotComponent }, // Route to the ChatbotComponent
+  { path: 'movies', component: MoviesComponent }, // Route to the MoviesComponent
+];
 
-  @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
-  })
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
 export class AppRoutingModule { }
