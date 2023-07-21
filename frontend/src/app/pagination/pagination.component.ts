@@ -6,36 +6,22 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./pagination.component.css']
 })
 export class PaginationComponent {
-  @Input() totalPages!: number;
-  @Input() currentPage!: number;
-  @Output() pageChanged = new EventEmitter<number>();
+  @Input() currentPage: number = 1;
+  @Input() totalPages: number = 10;
 
-  constructor() { }
+  @Output() onPageChanged = new EventEmitter<number>();
 
-  goToPage(page: number): void {
-    if (page >= 1 && page <= this.totalPages) {
-      this.currentPage = page;
-      this.pageChanged.emit(this.currentPage);
-    }
-  }
+  constructor() {}
 
-  goToPreviousPage(): void {
-    if (this.currentPage > 1) {
-      this.goToPage(this.currentPage - 1);
-    }
-  }
-
-  goToNextPage(): void {
+  onNext(): void {
     if (this.currentPage < this.totalPages) {
-      this.goToPage(this.currentPage + 1);
+      this.onPageChanged.emit(this.currentPage + 1);
     }
   }
 
-  getPageNumbers(): number[] {
-    const pagesArray = [];
-    for (let i = 1; i <= this.totalPages; i++) {
-      pagesArray.push(i);
+  onPrevious(): void {
+    if (this.currentPage > 1) {
+      this.onPageChanged.emit(this.currentPage - 1);
     }
-    return pagesArray;
   }
 }

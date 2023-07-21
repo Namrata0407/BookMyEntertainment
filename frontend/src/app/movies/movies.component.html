@@ -113,7 +113,7 @@
 <!-- Your existing movie listing code -->
 
 <app-pagination
-[totalPages]="totalPages"
-[currentPage]="currentPage"
-(pageChanged)="onPageChanged($event)"
+  [currentPage]="currentPage"
+  [totalPages]="totalPages"
+  (onPageChanged)="onPageChanged($event)"
 ></app-pagination>
