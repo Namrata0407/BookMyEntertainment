@@ -1,0 +1,27 @@
+<h2>All User List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th>membership_type</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.gender }}</td>
+      <td>{{ user.membership_type }}</td>
+      <td>
+        <button (click)="deleteUser(user.id)">Delete</button>
+        <button (click)="openUpdateDialog(user)"> 
+            <!-- <i class="fas fa-eye"></i> -->
+            view
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

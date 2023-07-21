@@ -1,5 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
+
+interface Movie {
+  description: string;
+  duration: string;
+  genre: string;
+  id: string;
+  language: string;
+  poster: string;
+  releaseDate: string;
+  title: string;
+}
 
 @Component({
   selector: 'app-movies',
@@ -7,9 +18,11 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-
-  movies: any[] = [];
- 
+  movies: Movie[] = [];
+  itemsPerPage: number = 12;
+  currentPage: number = 1;
+  totalPages: number = 1;
+  totalMoviesCount: number = 0; // Variable to store the total count of movies
 
   isFilterCollapsed: boolean = false;
   isLanguageCollapsed: boolean = false;
@@ -17,7 +30,7 @@ export class MoviesComponent implements OnInit {
   isRatingCollapsed: boolean = false;
   isReleaseDateCollapsed: boolean = false;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {} // Import HttpClient and add it to the constructor
 
   ngOnInit(): void {
     this.fetchMovies();
@@ -25,9 +38,19 @@ export class MoviesComponent implements OnInit {
 
   fetchMovies(): void {
     const apiUrl = 'http://127.0.0.1:5000/movies';
-    this.http.get<any[]>(apiUrl).subscribe(data => {
-      this.movies = data;
-    });
+    const params = new HttpParams().set('page', this.currentPage.toString());
+
+    this.http.get<Movie[]>(apiUrl, { params, observe: 'response' }).subscribe(
+      (response: HttpResponse<Movie[]>) => {
+        this.movies = response.body || [];
+        const totalMoviesCountHeader = response.headers.get('X-Total-Count');
+        this.totalMoviesCount = totalMoviesCountHeader ? +totalMoviesCountHeader : 0;
+        this.totalPages = Math.ceil(this.totalMoviesCount / this.itemsPerPage);
+      },
+      (error: any) => {
+        console.error('Error fetching movies data:', error);
+      }
+    );
   }
 
   toggleFilter(filterName: string): void {
@@ -49,5 +72,22 @@ export class MoviesComponent implements OnInit {
     }
   }
 
- 
+  onPageChanged(newPage: number): void {
+    this.currentPage = newPage;
+    this.fetchMovies();
+  }
+
+  goToPreviousPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+      this.fetchMovies();
+    }
+  }
+
+  goToNextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+      this.fetchMovies();
+    }
+  }
 }
