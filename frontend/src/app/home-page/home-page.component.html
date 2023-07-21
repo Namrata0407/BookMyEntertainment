@@ -1,9 +1,6 @@
 <!-- Home Page -->
 <section class="home-page">
   <!-- Search Navbar -->
-  <!-- Your homepage content... -->
-  
-  <!-- Rest of the content for the home page goes here -->
 
   <!-- Carousel -->
 
@@ -47,79 +44,23 @@
 
 
   <!-- slider -->
-  <div class="custom-slider">
-    <span >The Best Of Live Events</span>
-    <div class="custom-slide-container">
-      <div class="custom-slide">
-        <div class="custom-box">
-          <img
-            src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTQwKyBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/workshop-and-more-web-collection-202211140440.png"
-            alt=""
-          />
-        </div>
-        <div class="custom-box">
-          <img
-            src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTUrIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/kids-zone-collection-202211140440.png"
-            alt=""
-          />
-        </div>
-        <div class="custom-box">
-          <img
-            src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTkwKyBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/comedy-shows-collection-202211140440.png"
-            alt=""
-          />
-        </div>
-        <div class="custom-box">
-          <img
-            src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTEwKyBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/music-shows-collection-202211140440.png"
-            alt=""
-          />
-        </div>
-        <div class="custom-box">
-          <img
-            src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-NCBFdmVudHM%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/esports-collection-202211140440.png"
-            alt=""
-          />
-        </div>
 
-      <!--  -->
-      <div class="custom-box">
-        <img
-          src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTUrIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/kids-zone-collection-202211140440.png"
-          alt=""
-        />
-      </div>
-      <div class="custom-box">
-        <img
-          src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTUrIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/kids-zone-collection-202211140440.png"
-          alt=""
-        />
-      </div>
-      <div class="custom-box">
-        <img
-          src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTUrIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/kids-zone-collection-202211140440.png"
-          alt=""
-        />
-      </div>
-      <div class="custom-box">
-        <img
-          src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTUrIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/kids-zone-collection-202211140440.png"
-          alt=""
-        />
-      </div>
-      <div class="custom-box">
-        <img
-          src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:ote-MTUrIEV2ZW50cw%3D%3D,otc-FFFFFF,otf-Roboto,ots-64,ox-48,oy-320,ott-b:w-300:q-80/kids-zone-collection-202211140440.png"
-          alt=""
-        />
-      </div>
+  <div class="slider-container2">
+    <p>Recommended Movies</p>
+    <div class="slider2">
+      <div class="slider-inner" [style.transform]="'translateX(' + sliderPosition3 + 'px)'">
+        <div class="slide2" *ngFor="let image of images3">
+          <img [src]="image" alt="Image">
+        </div>
       </div>
     </div>
-    <div class="slider-buttons">
-      <button class="left-button" onclick="slideLeft()">⇒</button>
-      <button class="right-button" onclick="slideRight()">⇐</button>
-    </div>
+    <button class="slider-button prev" (click)="slidePrev3()">⇒</button>
+    <button class="slider-button next" (click)="slideNext3()">⇐</button>
   </div>
+  
+
+
+  
 
     <!-- custom div -->
     <div class="custom-div">
@@ -127,162 +68,33 @@
     </div>
     
 
-     <!-- slider-2 -->
-  <div class="custom-slider">
-    <span >Recommended Movies</span>
-    <div class="custom-slide-container">
-      <div class="custom-slide">
-        <div class="custom-box">
-          <img
-src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OS40LzEwICAyMC42SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00355365-lzflppmver-portrait.jpg"
-          alt=""
-          />
-        </div>
-        <div class="custom-box">
-          <img
-          src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:ote-MzQ3LjlLIExpa2Vz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00347867-ysxlbmwnbz-portrait.jpg"
-            alt=""
-          />
-        </div>
-        <div class="custom-box">
-          <img
-          src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:ote-MTQ4LjdLIExpa2Vz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00072466-kwewqvtsdf-portrait.jpg"
-            alt=""
-          />
-        </div>
-        <div class="custom-box">
-          <img
-          src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ny44LzEwICAzMC42SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00338378-flxyehczgl-portrait.jpg"
-            alt=""
-          />
-        </div>
-        <div class="custom-box">
-          <img
-          src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ni44LzEwICAxMC42SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00359921-gctkakzlcu-portrait.jpg"
-            alt=""
-          />
-        </div>
-
-      <!--  -->
-      <div class="custom-box">
-        <img
-        src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ny45LzEwICAxLjhLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00357595-wspgmtrnnr-portrait.jpg"
-          alt=""
-        />
-      </div>
-      <div class="custom-box">
-        <img
-        src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-OC4yLzEwICAxOS4ySyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00357966-yqxrvfkbxc-portrait.jpg"
-          alt=""
-        />
-      </div>
-      <div class="custom-box">
-        <img
-        src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ny41LzEwICA2Mi40SyBWb3Rlcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00359644-mnukadneej-portrait.jpg"
-          alt=""
-        />
-      </div>
-      <div class="custom-box">
-        <img
-        src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ny45LzEwICAxLjhLIFZvdGVz,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00357595-wspgmtrnnr-portrait.jpg"
-          alt=""
-        />
-      </div>
-      <div class="custom-box">
-        <img
-        src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@star-icon-202203010609.png,ox-24,oy-615,ow-29:ote-Ni4yLzEwICAxM0sgVm90ZXM%3D,ots-29,otc-FFFFFF,oy-612,ox-70:q-80/et00357727-rznxsvxcjy-portrait.jpg"
-          alt=""
-        />
-      </div>
-      </div>
-    </div>
-    <div class="slider-buttons-2">
-      <button class="left-button-2" onclick="slideLeft()">⇒</button>
-      <button class="right-button-2" onclick="slideRight()">⇐</button>
-    </div>
-  </div>
-
-
-
-
-
-       <!-- slider-3 -->
-       <div class="custom-slider">
-        <span >Laughter Therapy</span>
-        <div class="custom-slide-container">
-          <div class="custom-slide">
-            <div class="custom-box">
-              <img
-              src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAyMSBKdWwgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00329412-tepjrudfed-portrait.jpg"
-              alt=""
-              />
-            </div>
-            <div class="custom-box">
-              <img
-              src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-V2VkLCAxOSBKdWwgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:oi-discovery-catalog@@icons@@bundle-icon-shadow-4x.png,ox-15,oy-15,ow-50:q-80/et00364658-elmbrwwkhv-portrait.jpg"
-                alt=""
-              />
-            </div>
-            <div class="custom-box">
-              <img
-              src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyMyBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00363075-qwywkagvtz-portrait.jpg"
-                alt=""
-              />
-            </div>
-            <div class="custom-box">
-              <img
-              src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-V2VkLCAxOSBKdWwgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00327409-dtqljqsxyx-portrait.jpg"
-                alt=""
-              />
-            </div>
-            <div class="custom-box">
-              <img
-              src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-V2VkLCAxOSBKdWwgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00327409-dtqljqsxyx-portrait.jpg"
-                alt=""
-              />
-            </div>
-    
-          <!--  -->
-          <div class="custom-box">
-            <img
-            src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA1IEF1Zw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00358468-rrvlbvhzvh-portrait.jpg"
-              alt=""
-            />
-          </div>
-          <div class="custom-box">
-            <img
-            src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAxMSBBdWc%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00363550-zmgdfjyygc-portrait.jpg"
-              alt=""
-            />
-          </div>
-          <div class="custom-box">
-            <img
-            src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAyMSBKdWwgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00328947-bqhwyyndtq-portrait.jpg"
-              alt=""
-            />
-          </div>
-          <div class="custom-box">
-            <img
-            src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-V2VkLCAxOSBKdWwgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00336827-grvcnltyly-portrait.jpg"
-              alt=""
-            />
-          </div>
-          <div class="custom-box">
-            <img
-            src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyMiBKdWw%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00131881-cgxvksxwzx-portrait.jpg"
-              alt=""
-            />
-          </div>
-          </div>
-        </div>
-        <div class="slider-buttons-2">
-          <button class="left-button-2" onclick="slideLeft()">⇒</button>
-          <button class="right-button-2" onclick="slideRight()">⇐</button>
-        </div>
-      </div>
-
 <!-- ********************************************************************************************************** -->
 
+<div class="slider-container2">
+  <p>The Best Of Life Events</p>
+  <div class="slider2">
+    <div class="slider-inner" [style.transform]="'translateX(' + sliderPosition1 + 'px)'">
+      <div class="slide2" *ngFor="let image of images1">
+        <img [src]="image" alt="Image">
+      </div>
+    </div>
+  </div>
+  <button class="slider-button prev" (click)="slidePrev1()">⇒</button>
+  <button class="slider-button next" (click)="slideNext1()">⇐</button>
+</div>
+
+<div class="slider-container2">
+  <p>Online Streaming Events</p>
+  <div class="slider2">
+    <div class="slider-inner" [style.transform]="'translateX(' + sliderPosition2 + 'px)'">
+      <div class="slide2" *ngFor="let image of images2">
+        <img [src]="image" alt="Image">
+      </div>
+    </div>
+  </div>
+  <button class="slider-button prev" (click)="slidePrev2()">⇒</button>
+  <button class="slider-button next" (click)="slideNext2()">⇐</button>
+</div>
 
 
 

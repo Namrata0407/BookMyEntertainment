@@ -1,0 +1,28 @@
+<!-- signup.component.html -->
+<div class="container">
+    <h2>Signup With Your BookMyEntertainment</h2>
+    <form (submit)="submitForm()">
+        <div class="form-group">
+            <input type="text" id="name" name="name" [(ngModel)]="user.name" required placeholder="Name">
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" [(ngModel)]="user.email" required placeholder="Email">
+        </div>
+        <div class="form-group gender_grounp">
+            <select id="gender" name="gender" [(ngModel)]="user.gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" name="password" [(ngModel)]="user.password" required
+                placeholder="Password">
+        </div>
+        <div class="form-group">
+            <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="user.confirmPassword"
+                required placeholder="Confirm Password">
+        </div>
+        <button type="submit">Sign Up</button>
+    </form>
+</div>

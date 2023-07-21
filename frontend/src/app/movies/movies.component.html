@@ -110,3 +110,10 @@
     </div>
   </div>
   
+<!-- Your existing movie listing code -->
+
+<app-pagination
+[totalPages]="totalPages"
+[currentPage]="currentPage"
+(pageChanged)="onPageChanged($event)"
+></app-pagination>
