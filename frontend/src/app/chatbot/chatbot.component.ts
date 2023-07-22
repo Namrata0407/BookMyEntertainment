@@ -1,5 +1,3 @@
-
-
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -17,8 +15,8 @@ export class ChatbotComponent {
 
 
   dynamicContent: string[] = [
-    "Welcome to BookMyEntertainment",
-    "I am your BookMyEntertainment service bot",
+    "Welcome to BookYourEvent",
+    "I am your BookYourEvent service bot",
     "How can I assist you?"
   ];
   dynamicContentIndex: number = 0;
@@ -44,10 +42,10 @@ export class ChatbotComponent {
 
       // Send user message to OpenAI API and retrieve the response
       const apiUrl = 'https://ill-red-crane-ring.cyclic.app/chat';
-      const headers = new HttpHeaders({
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer yourkey' // Replace with your OpenAI API key
-      });
+      // const headers = new HttpHeaders({
+      //   'Content-Type': 'application/json',
+      //   'Authorization': 'Bearer yourkey' // Replace with your OpenAI API key
+      // });
 
       const data = {
         "model": "gpt-3.5-turbo",
@@ -58,8 +56,8 @@ export class ChatbotComponent {
         ]
       };
 
-      this.http.post<any>(apiUrl, data, { headers }).subscribe(response => {
-        const botResponse = response.choices[0].message.content.trim();
+      this.http.post<any>(apiUrl, { message: this.userMessage }).subscribe(response => {
+        const botResponse = response.message;
         this.chatHistory.push(`Bot: ${botResponse}`);
         this.isBotTyping = false;
         this.userMessage = ''; // Clear user input field
@@ -72,5 +70,4 @@ export class ChatbotComponent {
 
 
 
-  
 }

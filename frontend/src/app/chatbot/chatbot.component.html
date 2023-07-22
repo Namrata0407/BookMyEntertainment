@@ -12,11 +12,11 @@
       <div class="chat-history">
         <div *ngFor="let message of chatHistory">
           <div *ngIf="message.startsWith('User:')" class="user-message">
-            <i class="fas fa-user"></i>
+            <i class="fa-solid fa-user-tie-hair"></i>
             {{ message }}
           </div>
           <div *ngIf="message.startsWith('Bot:')" class="bot-message">
-            <i class="fas fa-robot"></i>
+            <i class="fa-solid fa-user-robot"></i>
             {{ message }}
           </div>
         </div>

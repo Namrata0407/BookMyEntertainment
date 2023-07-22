@@ -20,9 +20,11 @@
               placeholder="Search..."
               #searchInputBox
               (keyup)="onSearchMovie(searchInputBox.value)"
+              [(ngModel)]="spokenText"
             />
-            <!-- <button (click)="startSpeechRecognition()">Start Voice Search</button> -->
-
+            <button (click)="toggleListening()">
+              <i class="fa fa-microphone" [style.color]="micIconColor"></i>
+            </button>
           </a>
         </ng-container>
         <ng-template #searchInput>
@@ -30,8 +32,12 @@
             type="text"
             placeholder="Search..."
             #searchInputBox
-            (keyup)="onSearchMovie(searchInputBox.value)"
+            (onChange)="onSearchMovie(searchInputBox.value)"
+            [(ngModel)]="spokenText"
           />
+          <button (click)="toggleListening()">
+            <i class="fa fa-microphone" [style.color]="micIconColor"></i>
+          </button>
         </ng-template>
       </div>
       
@@ -53,7 +59,7 @@
           <i class="fa fa-bars"></i>
         </div>
         <!-- Hamburger menu content -->
-        <div class="hamburger-content" *ngIf="isHamburgerMenuOpen">
+        <div class="hamburger-content" >
           <!-- Add your navigation links here -->
           <!-- Example: -->
           <!-- <a routerLink="/">Home</a> -->

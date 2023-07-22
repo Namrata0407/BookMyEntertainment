@@ -20,6 +20,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { UserListComponent } from './user-list/user-list.component';
 import { UpdateUserDialogComponent } from './update-user-dialog/update-user-dialog.component';
 import { PaginationComponent } from './pagination/pagination.component';
+// import { VoiceModulationComponent } from './voice-modulation/voice-modulation.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     UserListComponent,
     UpdateUserDialogComponent,
     PaginationComponent,
+    // VoiceModulationComponent,
   ],
   imports: [
     BrowserModule,
