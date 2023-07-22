@@ -153,3 +153,19 @@
     background-color: rgba(255, 255, 255, 0.1);
   }
   
+
+
+ 
+  
+  input {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+  }
+ 

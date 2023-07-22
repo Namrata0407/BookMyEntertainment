@@ -1,28 +1,55 @@
-.pagination-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 14px;
-    cursor: pointer;
-    margin: 0 5px;
-  }
-  
-  button[disabled] {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  
-  span.page-number {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
+/* pagination.component.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+button {
+  margin: 0 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px; /* Round shape */
+  font-size: 16px;
+  font-weight: bold;
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */
+  color: white;
+  transition: background-color 0.3s ease;
+  background-color: #3498db;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #03385d;
+  color: #fff;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  background-color: #ddd;
+  color: #777;
+  cursor: not-allowed;
+}
+
+span {
+  padding: 8px 15px;
+  border-radius: 20px; /* Round shape */
+  background-color: #f1c40f;
+  font-size: 20px;
+  font-weight: bold;
+  color: darkblue;
+  /* font-size: 15px; */
+  border: 1px solid #e1b60b;
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}

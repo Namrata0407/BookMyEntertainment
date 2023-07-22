@@ -6,16 +6,16 @@
         <div class="filter-content" [ngClass]="{'collapsed': isLanguageCollapsed}">
           <div class="filter-options">
             <!-- Language options here -->
-            <button>Hindi</button>
-            <button>English</button>
-            <button>Telgu</button>
-            <button>Tamil</button>
-            <button>Marathi</button>
-            <button>Malyalam</button>
-            <button>Kannda</button>
-            <button>Punjabi</button>
-            <button>Gujrati</button>
-            <button>Multi Language</button>
+            <button (click)="filterByLanguage('Hindi')">Hindi</button>
+            <button (click)="filterByLanguage('English')">English</button>
+            <button (click)="filterByLanguage('Telgu')">Telgu</button>
+            <button (click)="filterByLanguage('Tamil')">Tamil</button>
+            <button (click)="filterByLanguage('Marathi')">Marathi</button>
+            <button (click)="filterByLanguage('Malyalam')">Malyalam</button>
+            <button (click)="filterByLanguage('Kannda')">Kannda</button>
+            <button (click)="filterByLanguage('Punjabi')">Punjabi</button>
+            <button (click)="filterByLanguage('Gujrati')">Gujrati</button>
+            <button (click)="filterByLanguage('Multi Language')">Multi Language</button>
           </div>
         </div>
       </div>
@@ -25,21 +25,22 @@
         <div class="filter-content" [ngClass]="{'collapsed': isGenresCollapsed}">
           <div class="filter-options">
             <!-- Genre options here -->
-            <button>Drama</button>
-          
-          
-            <button>Action</button>
-            <button>Thriller</button>
-            <button>Comedy</button>
-            <button>Romantic</button>
-            <button>Crime</button>
-            <button>Horror</button>
-            <button>Biography</button>   
-            <button>Adventure</button>    
-            <button>Animation</button> 
+            <button (click)="filterByGenre('Drama')">Drama</button>
+            <button (click)="filterByGenre('Action')">Action</button>
+            <button (click)="filterByGenre('Thriller')">Thriller</button>
+            <button (click)="filterByGenre('Comedy')">Comedy</button>
+            <button (click)="filterByGenre('Romantic')">Romantic</button>
+            <button (click)="filterByGenre('Crime')">Crime</button>
+            <button (click)="filterByGenre('Horror')">Horror</button>
+            <button (click)="filterByGenre('Biography')">Biography</button>
+            <button (click)="filterByGenre('Adventure')">Adventure</button>
+            <button (click)="filterByGenre('Animation')">Animation</button>
+            <button (click)="filterByGenre('Hollywood')">Hollywood</button>
           </div>
         </div>
       </div>
+
+
     
       <div class="filter-section">
         <button class="filter-toggle" (click)="toggleFilter('rating')">Rating</button>
@@ -48,27 +49,24 @@
             <!-- Rating options here -->
             <!-- <i class="fal fa-star"></i> -->
 <div>
-    <i class="fa-duotone fa-star"></i>
-    <i class="fa-duotone fa-star"></i>
-    <i class="fa-duotone fa-star"></i>
-    <i class="fa-duotone fa-star"></i>
-    <i class="fa-duotone fa-star"></i>
+  ⭐ ⭐ ⭐ ⭐ ⭐
 </div>
 <div>
-    <i class="fa-duotone fa-star"></i>
-    <i class="fa-duotone fa-star"></i>
-    <i class="fa-duotone fa-star"></i>
-    <i class="fa-duotone fa-star"></i>
+  ⭐
+  ⭐
+  ⭐
+  ⭐
+
 </div>
 <div>
-    <i class="fa-duotone fa-star"></i>
-    <i class="fa-duotone fa-star"></i>
-    <i class="fa-duotone fa-star"></i>
+  ⭐
+  ⭐
+  ⭐
     
 </div>
 <div>
-    <i class="fa-duotone fa-star"></i>
-    <i class="fa-duotone fa-star"></i>
+  ⭐
+  ⭐
 </div>
 <div>
     ⭐
@@ -94,6 +92,8 @@
    </div>
     
 
+
+
     <div class="movies-grid">
       <div class="movie-card" *ngFor="let movie of movies">
         <img [src]="movie.poster" [alt]="movie.title" class="movie-poster">
@@ -113,7 +113,7 @@
 <!-- Your existing movie listing code -->
 
 <app-pagination
-[totalPages]="totalPages"
-[currentPage]="currentPage"
-(pageChanged)="onPageChanged($event)"
+  [currentPage]="currentPage"
+  [totalPages]="totalPages"
+  (onPageChanged)="onPageChanged($event)"
 ></app-pagination>
