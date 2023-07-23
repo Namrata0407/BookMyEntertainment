@@ -1,0 +1,126 @@
+/* shows.component.css */
+
+/* Center the image */
+.main_div{
+    display: flex;
+    /* border: 13px solid red; */
+    width: 80%;
+    margin: auto;
+}
+
+
+
+.main_div>div:nth-child(1){
+/* border: 3px solid green; */
+width: 40%;
+}
+
+.main_div>div:nth-child(1)>img{
+width: 100%;
+height: 100%
+}
+
+
+  /* Styles for the details div */
+  .container {
+    /* max-width: 600px; */
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+     
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-weight: bold;
+        color: rgb(10, 46, 46);
+        font-size: 2.5rem; /* Increase font size */
+        text-transform: uppercase; /* Convert text to uppercase */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+        letter-spacing: 2px; /* Increase letter spacing */
+        border-bottom: 2px solid rgb(10, 46, 46); /* Add a bottom border */
+        padding-bottom: 10px; /* Add some padding at the bottom */
+        line-height: 1.2; /* Adjust line height for better spacing */
+        background-color: #f9f9f9; /* Add a light background color */
+        border-radius: 5px; /* Add rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+      
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    /* border: 2px dashed red; */
+  }
+  
+  li {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    /* border: 2px dashed rgb(15, 14, 14); */
+   
+
+  }
+  .bnao{
+ display: flex; 
+     justify-content: space-between;
+     align-items: center;
+  }
+  
+  button{
+    margin-right: 50px;
+    padding: 13px;
+    border-radius: 50%;
+    background-color: rgb(23, 101, 101);
+    color: white;
+  }
+
+  button:hover{
+    cursor: pointer;
+    background-color: rgb(4, 52, 52);
+  }
+  button>i{
+    font-size: 20px;
+  }
+  li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  h3 {
+    margin: 0;
+    font-size: 1.4rem; /* Adjust font size */
+    font-weight: bold;
+    color: #800080;
+    text-transform: capitalize; /* Capitalize the first letter of each word */
+    border-bottom: 2px solid rgb(8, 135, 135); /* Add a bottom border */
+    padding-bottom: 5px; /* Add some padding at the bottom */
+    margin-bottom: 15px; /* Add margin at the bottom for spacing */
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  /* Styles for the "No shows available" message */
+  .text-center {
+    text-align: center;
+  }
+  
+  .no-shows {
+    font-weight: bold;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+
+  .mt-5>p{
+    font-size: 70px;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+  }
+  

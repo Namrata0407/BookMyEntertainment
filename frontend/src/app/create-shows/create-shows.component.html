@@ -1,0 +1,44 @@
+<h2>Shows List</h2>
+<div class="openAddMovieDiv">
+  <button id="openAddMovie" mat-button (click)="openAddMovieDialog()">
+    Add Movie
+  </button>  
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>poster</th>
+      <th>Description</th>
+      <th>Duration</th>
+      <th>Genre</th>
+      <th>Language</th>
+      <th>ReleaseDate</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.title }}</td>
+      <td><img width="50px" height="50px" src={{user.poster}} alt="imag"></td>
+      <td>{{ user.description }}</td>
+      <td>{{ user.duration }}</td>
+      <td>{{ user.genre }}</td>
+      <td>{{ user.language }}</td>
+      <td>{{ user.releaseDate }}</td>
+      <td>
+        <button (click)="deleteUser(user.id)">Delete</button>
+        <button (click)="openUpdateDialog(user)">
+          view
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<app-pagination
+[currentPage]="currentPage"
+[totalPages]="totalPages"
+(onPageChanged)="onPageChanged($event)"
+></app-pagination>

@@ -20,7 +20,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { UserListComponent } from './user-list/user-list.component';
 import { UpdateUserDialogComponent } from './update-user-dialog/update-user-dialog.component';
 import { PaginationComponent } from './pagination/pagination.component';
-// import { VoiceModulationComponent } from './voice-modulation/voice-modulation.component';
+import { ShowsComponent } from './shows/shows.component';
+import { BookingsComponent } from './bookings/bookings.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { CreateShowsComponent } from './create-shows/create-shows.component';
+import { UpdateShowDialogComponent } from './update-show-dialog/update-show-dialog.component';
+import { AddMovieModalComponent } from './add-movie-modal/add-movie-modal.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +43,14 @@ import { PaginationComponent } from './pagination/pagination.component';
     UserListComponent,
     UpdateUserDialogComponent,
     PaginationComponent,
-    // VoiceModulationComponent,
+    ShowsComponent,
+    BookingsComponent,
+    AdminPageComponent,
+    AdminLoginComponent,
+    CreateShowsComponent,
+    UpdateShowDialogComponent,
+    AddMovieModalComponent,
+    
   ],
   imports: [
     BrowserModule,

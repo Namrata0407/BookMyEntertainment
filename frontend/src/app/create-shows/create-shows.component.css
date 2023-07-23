@@ -1,0 +1,102 @@
+/* styles.css (or your custom CSS file) */
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Heading styles */
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: rgb(5, 23, 23);
+  }
+  
+  /* Table styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Table header styles */
+  thead {
+    background-color: aqua;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Table header and cell styles */
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Table header styles */
+  th {
+    font-weight: bold;
+  }
+  
+  /* Alternate row background color for better readability */
+  tbody tr:nth-child(even) {
+    /* background-color: #f8f8f8; */
+    background-color: rgb(221, 243, 235);
+  }
+  
+  /* Delete button styles */
+  button {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* background-color: ; */
+    /* color: #fff; */
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  /* Update button styles */
+  button i {
+    font-size: 18px;
+  }
+  
+  /* Optional: Make the table responsive for smaller screens */
+  @media (max-width: 500px) {
+    table {
+      font-size: 14px;
+    }
+  }
+  
+
+  tr>td:nth-child(5){
+    /* border: 3px solid red; */
+    display: flex;
+    gap: 8px;
+  }
+
+td>button:nth-child(1){
+    color: red;
+}
+
+
+td>button:nth-child(2){
+    color: blue;
+}
+
+#openAddMovie{
+    margin-bottom: 15px;
+    border-radius: 12%;
+    background-color: blueviolet;
+    color: white;
+}
