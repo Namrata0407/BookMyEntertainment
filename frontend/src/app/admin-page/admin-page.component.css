@@ -1,0 +1,83 @@
+
+
+*{
+    background-image: url("https://tse4.mm.bing.net/th?id=OIP.WIx6udY6JMwdG5r4TvK8LAHaEs&pid=Api&P=0&h=180");
+    background-size: 100%, 100%
+}
+
+
+
+.admin-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .create-button {
+    padding: 12px 24px;
+    margin-right: 20px;
+    background-color: #42A5F5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .create-button:hover {
+    background-color: #1E88E5;
+  }
+  
+  .userlist-button {
+    padding: 12px 24px;
+    background-color: #0cf317;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    /* border: 2px solid red; */
+  }
+  
+  .userlist-button:hover {
+    background-color: #036008;
+  }
+  
+
+  /* Styles for the Admin Page */
+.admin-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .admin-page h2 {
+    font-size: 50px;
+    margin-bottom: 100px;
+    color: #f3a621;
+  }
+
+
+
+  #btn{
+    /* border: 2px solid red; */
+ background: #ab5005;
+  }
+
+
+  #btn:hover{
+    background: #683103;
+  }
+
+  #btn2{
+    background: #ab5005;
+  }
+
+
+  #btn2:hover{
+    background: #683103;
+
+  }

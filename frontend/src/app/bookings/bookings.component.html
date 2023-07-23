@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col" *ngFor="let booking of bookings">
+        <div class="movie-card mb-3">
+          <img [src]="booking.poster" [alt]="booking.title" class="card-img-top" />
+          <div class="card-body">
+            <p class="card-title"><strong>Title:</strong>{{ booking.title }}</p>
+            <p class="card-text"><strong>Date:</strong> {{ booking.date }}</p>
+            <p class="card-text"><strong>Start Time:</strong> {{ booking.start_time }}</p>
+            <p class="card-text"><strong>End Time:</strong> {{ booking.end_time }}</p>
+            <p class="card-text"><strong>Venue:</strong> {{ booking.venue }}</p>
+            <p class="card-text"><strong>Category:</strong> {{ booking.category }}</p>
+            <button class="btn btn-danger" (click)="deleteBooking(booking.id)">Cancel Booking</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bokingAuth" *ngIf="isAuth == false">
+        <p>
+            Please Login Again
+        </p>
+    </div>
+  </div>

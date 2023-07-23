@@ -1,5 +1,5 @@
 .chatbot-page {
-  background-image: url("https://tse4.mm.bing.net/th?id=OIP.tcvlGxhWnDVNtj4xzVjYQAHaEK&pid=Api&P=0&h=180");
+  background-image: url("https://tse4.mm.bing.net/th?id=OIF.CXOo9innbdY5ZmlZ03j0%2bg&pid=Api&P=0&h=180");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -192,8 +192,8 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4),
     0px 7px 13px -3px rgba(0, 0, 0, 0.3), 0px -3px 0px inset rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  background-color: #f2f2f2;
-  border: 3px solid red;
+  background-color: #a0e2f8;
+  border: 2px solid rgb(67, 65, 65);
 }
 
 /* Responsive Styling */

@@ -1,0 +1,12 @@
+<div class="admin-login">
+    <h2>Admin Login Page</h2>
+    <form (submit)="login()">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required>
+  
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required>
+  
+      <button type="submit">Login</button>
+    </form>
+  </div>

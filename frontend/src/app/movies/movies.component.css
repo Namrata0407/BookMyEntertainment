@@ -230,9 +230,33 @@
   color: #fcd53f;
 }
 
+.loadinNotmatch1{
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loadinNotmatch1>p{
+   font-size: 45px;
+   color: rgb(212, 11, 11);
+}
 
 
 
 
-/* **********************pagination******************** */
+.loadinNotmatch{
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.loadinNotmatch>p{
+   font-size: 45px;
+   color: black;
+}

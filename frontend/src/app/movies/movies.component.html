@@ -83,7 +83,16 @@
     </div>
   </div>
 
-  <div class="movies-grid">
+
+  <div *ngIf="isLoading == true" class="loadinNotmatch">
+    <p>Loading.....</p>
+  </div>
+  <div *ngIf="isLoading == false && movies.length == 0" class="loadinNotmatch1">
+    <p>No Item Matched</p>
+  </div>
+
+
+  <div class="movies-grid" *ngIf="movies.length != 0 && isLoading == false">
     <div class="movie-card" *ngFor="let movie of movies">
       <img [src]="movie.poster" [alt]="movie.title" class="movie-poster" />
       <div class="movie-info">

@@ -76,6 +76,7 @@ export class MoviesComponent implements OnInit {
         this.movies = response;
       },
       (error: any) => {
+        this.isLoading = false
         console.error('Error fetching movies data:', error);
       }
     );

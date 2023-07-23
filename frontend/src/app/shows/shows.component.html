@@ -1,0 +1,49 @@
+<!-- shows.component.html -->
+<h2 class="text-center mb-4">Show Details</h2>
+
+<div class="main_div">
+  <div *ngIf="moviePoster" class="text-center">
+    <img [src]="moviePoster" [alt]="'Movie Poster'" class="img-fluid" />
+  </div>
+
+  <div *ngIf="loading == true" >
+    <h1>Loading.....</h1>
+  </div>
+ 
+  <div *ngIf="shows.length > 0 && loading == false" class="container mt-5">
+
+    
+    <ul class="list-group">
+      <li *ngFor="let show of shows" class="list-group-item">
+        <h3 class="mb-2">{{ show.category }}</h3>
+        <div class="bnao">
+          <div class="li_first">
+            <!-- <p><strong>Title:</strong> {{ show.title }}</p> -->
+            <p><strong>Date:</strong> {{ show.date }}</p>
+            <p><strong>Start Time:</strong> {{ show.start_time }}</p>
+            <p><strong>End Time:</strong> {{ show.end_time }}</p>
+            <p><strong>Venue:</strong> {{ show.venue }}</p>
+            <p><strong>Rating:</strong> {{ show.rating }}</p>
+            <p><strong>Available Seats:</strong> {{ show.available_seats }}</p>
+            <p><strong>Ticket Price:</strong> {{ show.ticket_price }}</p>
+          </div>
+
+
+
+          <div class="li_second">
+            <button><i class="fa-solid fa-video-plus" (click)="onButtonClick(show)"></i></button>
+          </div>
+        </div>
+
+
+
+        <!-- ... other details ... -->
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="shows.length == 0 && loading == false" class="text-center mt-5">
+    <p class="no-shows">No shows available for this movie.</p>
+  </div>
+</div>
+
