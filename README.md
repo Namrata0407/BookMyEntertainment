@@ -20,6 +20,7 @@ This diagram provides a visual representation of the entities and their relation
 - **Event Discovery:** Explore a vast array of entertainment events, including movies, concerts, sports matches, plays, and more, with detailed information on dates, venues, and showtimes.
 - **Shows Page:** View all the shows related to a particular movie, including matinee, evening, late night, start time, end time, seats, price, location, and release date information.
 - **Multiple Languages:** Enjoy a multilingual platform to cater to a diverse audience and provide a user-friendly experience for all.
+- **Multiple Generes:** Enjoy a multiple genere movies.
 - **MyBookings:** View your booked movie list.
 - **Help Center:** Access reliable customer support to address any queries, concerns, or issues related to bookings or the app.
 - **Admin Side:** Manage all user activity, movies, and shows functionality.
@@ -34,7 +35,7 @@ This diagram provides a visual representation of the entities and their relation
 - Error Handling and Logging: Proper error handling and logging mechanisms are implemented to catch and log unexpected errors or exceptions.
 - Database Optimization: The database design is optimized for efficient data retrieval and storage.
 
-- ## API Endpoints (For Backend Applications)
+## API Endpoints (For Backend Applications)
 
 ### Movie Page
 
@@ -85,6 +86,15 @@ The shows management page allows the admin to perform CRUD operations on the sho
 | PUT    | /api/shows/:show_id    | Update a show's information.             |
 | POST   | /api/shows/:show_id    | Create a new show for a specific movie.  |
 | DELETE | /api/shows/:show_id    | Delete a show for a specific movie.      |
+
+### Booking Page
+
+Here users can see their booked movie list.
+
+| Method | Endpoint           | Description                                  |
+| ------ | ------------------ | -------------------------------------------- |
+| GET    | /api/bookshow      | Get a list of all bookings made by the user.|
+| DELETE | /api/bookshow/:show_id | Cancel a booking made by the user.         |
 
 
 ## Installation & Getting Started
