@@ -33,7 +33,7 @@ export class SignupComponent {
 
     // If passwords match, proceed with the signup request
     const { confirmPassword, ...userData } = this.user;
-    const url = 'http://localhost:5000/users';
+    const url = 'https://bookevent.onrender.com/users';
     this.http.post(url, userData).subscribe(
       (response) => {
         console.log('User created successfully!', response);

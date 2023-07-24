@@ -58,7 +58,7 @@ export class MoviesComponent implements OnInit {
 
   fetchMovies(title: string, languageFilter: string, genreFilter: string): void {
     this.isLoading = true
-    let apiUrl = `http://127.0.0.1:5000/movies?page=${this.currentPage}&page_size=${this.itemsPerPage}&title=${title}`;
+    let apiUrl = `https://bookevent.onrender.com/movies?page=${this.currentPage}&page_size=${this.itemsPerPage}&title=${title}`;
 
     // Add language filter to the API URL if a language is selected
     if (languageFilter) {

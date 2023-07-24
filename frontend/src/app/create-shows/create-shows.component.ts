@@ -33,7 +33,7 @@ export class CreateShowsComponent implements OnInit {
   
 
   deleteUser(userId: string) {
-    const apiUrl = `http://localhost:5000/movies/${userId}`;
+    const apiUrl = `https://bookevent.onrender.com/movies/${userId}`;
 
     this.http.delete(apiUrl).subscribe(
       () => {
@@ -68,7 +68,7 @@ export class CreateShowsComponent implements OnInit {
       if (updatedShow) {
         // Perform the POST request with the updatedShow object
         // Use the HttpClient to make the POST request
-        this.http.post('http://localhost:5000/shows', updatedShow).subscribe(
+        this.http.post('https://bookevent.onrender.com/shows', updatedShow).subscribe(
           () => {
             // Handle successful response (if needed)
             alert('Show added successfully!');

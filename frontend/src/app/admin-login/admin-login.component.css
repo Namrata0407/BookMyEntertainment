@@ -3,13 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
   }
   
-  .admin-login h2 {
-    font-size: 24px;
+  .admin-login p {
+    font-size: 44px;
     margin-bottom: 20px;
-    color: #2196F3;
+    color: #032b4c;
+    font-weight: bold;
   }
   
   .admin-login form {
@@ -19,7 +20,7 @@
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f5f5f5;
+    background-color: #c1bdbd;
   }
   
   .admin-login label {

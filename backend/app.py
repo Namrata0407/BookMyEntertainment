@@ -478,5 +478,4 @@ def login():
     return jsonify({'message': 'Invalid username or password'}), 401
 
 if __name__ == '__main__':
-    # print("lsadjablasdbhjkhds",mongo_uri,dotenv_path)
     app.run()

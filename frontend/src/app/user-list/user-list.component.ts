@@ -31,7 +31,7 @@ export class UserListComponent implements OnInit {
   }
 
   fetchUsers() {
-    this.http.get<User[]>('http://localhost:5000/users').subscribe(
+    this.http.get<User[]>('https://bookevent.onrender.com/users').subscribe(
       (data) => {
         this.users = data;
       },
@@ -44,7 +44,7 @@ export class UserListComponent implements OnInit {
   deleteUser(userId: string) {
     if (confirm('Are you sure you want to delete this user?')) {
       // Make API call to delete user with given ID
-      this.http.delete(`http://localhost:5000/users/${userId}`).subscribe(
+      this.http.delete(`https://bookevent.onrender.com/users/${userId}`).subscribe(
         () => {
           // Update the list of users after successful deletion
           this.users = this.users.filter((user) => user.id !== userId);
@@ -70,7 +70,7 @@ export class UserListComponent implements OnInit {
         if (index !== -1) {
           this.users[index] = result;
           // Perform API call to update user data
-          this.http.put(`http://localhost:5000/users/${result.id}`, result).subscribe(
+          this.http.put(`https://bookevent.onrender.com/users/${result.id}`, result).subscribe(
             () => {
               // Update successful
               alert('User updated successfully!');

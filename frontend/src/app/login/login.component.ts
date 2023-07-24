@@ -18,7 +18,7 @@ export class LoginComponent {
 
   submitForm() {
     // Send a POST request to the API with the user credentials
-    this.http.post<any>('http://localhost:5000/login', this.user).subscribe(
+    this.http.post<any>('https://bookevent.onrender.com/login', this.user).subscribe(
       (response) => {
         // If the login is successful, store the token in the local storage
         localStorage.setItem('access_token', response.access_token);

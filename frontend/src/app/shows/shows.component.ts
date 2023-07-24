@@ -42,7 +42,7 @@ export class ShowsComponent implements OnInit {
 
   fetchShows(movieId: string): void {
     this.loading = true;
-    const apiUrl = `http://localhost:5000/shows?movie_id=${movieId}`; // Remove the const keyword
+    const apiUrl = `https://bookevent.onrender.com/shows?movie_id=${movieId}`; // Remove the const keyword
     this.http.get(apiUrl).subscribe(
       (response) => {
       
@@ -69,7 +69,7 @@ export class ShowsComponent implements OnInit {
       venue: show.venue,
     };
 
-    const apiUrl = 'http://localhost:5000/bookshow';
+    const apiUrl = 'https://bookevent.onrender.com/bookshow';
     const token = localStorage.getItem('access_token');
     if (!token) {
       console.error('No access token found.');

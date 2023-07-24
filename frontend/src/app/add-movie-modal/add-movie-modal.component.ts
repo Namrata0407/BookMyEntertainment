@@ -42,7 +42,7 @@ export class AddMovieModalComponent {
 
   onSubmit(): void {
     // Perform post request here using the movie object
-    this.http.post('http://localhost:5000/movies', this.movie).subscribe(
+    this.http.post('https://bookevent.onrender.com/movies', this.movie).subscribe(
       (response) => {
         console.log('Movie added successfully:', response);
         alert("Movie added successfully !!")

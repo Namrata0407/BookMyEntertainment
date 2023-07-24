@@ -33,7 +33,7 @@ export class BookingsComponent implements OnInit {
   }
 
   fetchBookings(): void {
-    const apiUrl = 'http://localhost:5000/bookshow';
+    const apiUrl = 'https://bookevent.onrender.com/bookshow';
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       Authorization: `Bearer ${this.token}`,
@@ -53,7 +53,7 @@ export class BookingsComponent implements OnInit {
   }
 
   deleteBooking(bookingId: string): void {
-    const apiUrl = `http://localhost:5000/bookshow/${bookingId}`;
+    const apiUrl = `https://bookevent.onrender.com/bookshow/${bookingId}`;
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       Authorization: `Bearer ${this.token}`,
