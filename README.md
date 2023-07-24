@@ -7,9 +7,11 @@ Welcome to BookMyEntertainment, your ultimate destination for hassle-free entert
 <!-- Add the link to your deployed application here -->
 https://deployed-site.whatever
 
-## Video Walkthrough of the Project
+## Entity Relationship (ER) Diagram
+This diagram provides a visual representation of the entities and their relationships within the BookMyEntertainment platform.
+![ER Diagram](https://github.com/Namrata0407/BookMyEntertainment/assets/112812835/3107a30a-a9f1-4bf2-9db3-fc48e4e8b8de)
 
-<!-- If you have a video walkthrough, you can add the link here -->
+
 
 ## Features
 
