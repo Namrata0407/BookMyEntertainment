@@ -2,10 +2,10 @@
 
 Welcome to BookMyEntertainment, your ultimate destination for hassle-free entertainment! Discover and book tickets to the hottest movies, electrifying concerts, thrilling sports events, and captivating theatrical performances, all at your fingertips. Experience the joy of seamless online ticketing and get ready to embark on unforgettable experiences with BookMyEntertainment.
 
-## Deployed App
+## Deployed Link of BookMyEntertainment
 
 <!-- Add the link to your deployed application here -->
-https://deployed-site.whatever
+[https://deployed-site.whatever](https://frontendapp-seven.vercel.app/)
 
 ## Entity Relationship (ER) Diagram
 This diagram provides a visual representation of the entities and their relationships within the BookMyEntertainment platform.
