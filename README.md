@@ -34,6 +34,59 @@ This diagram provides a visual representation of the entities and their relation
 - Error Handling and Logging: Proper error handling and logging mechanisms are implemented to catch and log unexpected errors or exceptions.
 - Database Optimization: The database design is optimized for efficient data retrieval and storage.
 
+- ## API Endpoints (For Backend Applications)
+
+### Movie Page
+
+Here you can get all the movies with their details information.
+
+| Method | Endpoint        | Description                              |
+| ------ | --------------- | ---------------------------------------- |
+| GET    | /api/movies     | Get all the movies with their details.  |
+
+### Shows Page
+
+Here you can get all the shows related to a particular movie.
+
+| Method | Endpoint          | Description                              |
+| ------ | ----------------- | ---------------------------------------- |
+| GET    | /api/shows        | Get all the shows.                       |
+| POST   | /api/bookshow     | Book a show for a specific movie.        |
+
+### Users Management Page
+
+The user management page allows the admin to perform CRUD operations on the user profiles.
+
+| Method | Endpoint              | Description                               |
+| ------ | --------------------- | ----------------------------------------- |
+| GET    | /api/users            | Get a list of all logged-in users.        |
+| PUT    | /api/users/:user_id   | Update a user's information.              |
+| DELETE | /api/users/:user_id   | Delete a user's information.              |
+
+### Movies Management Page
+
+The movie management page allows the admin to perform CRUD operations on the movies.
+
+| Method | Endpoint               | Description                              |
+| ------ | ---------------------- | ---------------------------------------- |
+| GET    | /api/movies            | Get a list of all movies available.      |
+| GET    | /api/movies/s          | Get a list of all movies available.      |
+| GET    | /api/movies/:movie_id  | Get details of a particular movie.       |
+| PUT    | /api/movies/:movie_id  | Update details of a particular movie.    |
+| DELETE | /api/movies/:movie_id  | Delete a particular movie.               |
+
+### Shows Management Page
+
+The shows management page allows the admin to perform CRUD operations on the shows.
+
+| Method | Endpoint               | Description                              |
+| ------ | ---------------------- | ---------------------------------------- |
+| GET    | /api/shows             | Get a list of all shows available.       |
+| PUT    | /api/shows/:show_id    | Update a show's information.             |
+| POST   | /api/shows/:show_id    | Create a new show for a specific movie.  |
+| DELETE | /api/shows/:show_id    | Delete a show for a specific movie.      |
+
+
 ## Installation & Getting Started
 
 ```bash
