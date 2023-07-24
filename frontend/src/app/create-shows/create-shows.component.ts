@@ -91,7 +91,7 @@ export class CreateShowsComponent implements OnInit {
   }
 
   fetchUsers(title: string): void {
-    const apiUrl = `http://127.0.0.1:5000/movies?page=${this.currentPage}&page_size=${this.itemsPerPage}&title=${title}`;
+    const apiUrl = `https://bookevent.onrender.com/movies?page=${this.currentPage}&page_size=${this.itemsPerPage}&title=${title}`;
     this.http.get<Movies[]>(apiUrl).subscribe(
       (response) => {
         this.users = response;
